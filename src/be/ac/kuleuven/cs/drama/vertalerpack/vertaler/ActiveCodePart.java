@@ -118,8 +118,8 @@ public abstract class ActiveCodePart {
 
       if ((i != -1) || (j != -1)) {
          boolean plus = true;
-
-         if (((j != -1) && (i > j)) || (i == -1)) {
+ 
+         if (((j != -1) && (j > i)) || (i == -1)) {
             plus = false;
             i = j;
          }
@@ -145,7 +145,8 @@ public abstract class ActiveCodePart {
          } catch (Exception ee) {
             try {
                val1 = Long.parseLong(op1);
-               val2 = vertaler.getSymbolValue(op2);
+               val2 = Long.parseLong(op2);
+               //val2 = vertaler.getSymbolValue(op2);
             } catch (Exception e) {
                throw new AbnormalTerminationException("Ongeldige expressie: " + str);
             }
