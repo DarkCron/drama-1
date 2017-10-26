@@ -271,7 +271,6 @@ public class DynamicTable extends JPanel {
 	AbstractAction searchEnterAction = new AbstractAction() {
 
 		public void actionPerformed(ActionEvent arg0) {
-			System.out.println("Yo");
 			String parseString = ((JTextField) arg0.getSource()).getText();
 			boolean parseSucceeded = false;
 			boolean isValidAddress = false;
